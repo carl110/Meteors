@@ -16,6 +16,30 @@
 		89215B1C23F69B3D00C2FEC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89215B1A23F69B3D00C2FEC8 /* LaunchScreen.storyboard */; };
 		89215B2723F69B3E00C2FEC8 /* MeteorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B2623F69B3E00C2FEC8 /* MeteorsTests.swift */; };
 		89215B3223F69B3E00C2FEC8 /* MeteorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B3123F69B3E00C2FEC8 /* MeteorsUITests.swift */; };
+		89215B5423F69BAE00C2FEC8 /* MainFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B4223F69BAE00C2FEC8 /* MainFlowController.swift */; };
+		89215B5523F69BAE00C2FEC8 /* MainFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B4723F69BAE00C2FEC8 /* MainFactory.swift */; };
+		89215B5623F69BAE00C2FEC8 /* MeteorDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B4A23F69BAE00C2FEC8 /* MeteorDetailsModel.swift */; };
+		89215B5723F69BAE00C2FEC8 /* MeteorDetailsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B4C23F69BAE00C2FEC8 /* MeteorDetailsFlowController.swift */; };
+		89215B5823F69BAE00C2FEC8 /* MeteorDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89215B4E23F69BAE00C2FEC8 /* MeteorDetails.storyboard */; };
+		89215B5923F69BAE00C2FEC8 /* MeteorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B4F23F69BAE00C2FEC8 /* MeteorDetailsViewController.swift */; };
+		89215B5A23F69BAE00C2FEC8 /* MeteorDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B5123F69BAE00C2FEC8 /* MeteorDetailsViewModel.swift */; };
+		89215B5B23F69BAE00C2FEC8 /* MeteorDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B5323F69BAE00C2FEC8 /* MeteorDetailsFactory.swift */; };
+		89215B6323F6A5E100C2FEC8 /* UIColor+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B6223F6A5E100C2FEC8 /* UIColor+extensions.swift */; };
+		89215B6E23F6ABD700C2FEC8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B6D23F6ABD700C2FEC8 /* CoreDataManager.swift */; };
+		89215B7023F6AC2600C2FEC8 /* DataForMeteors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B6F23F6AC2600C2FEC8 /* DataForMeteors.swift */; };
+		89215B7223F6B1FD00C2FEC8 /* MeteorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B7123F6B1FD00C2FEC8 /* MeteorModel.swift */; };
+		89215B7423F6BB5300C2FEC8 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B7323F6BB5300C2FEC8 /* UIView+extensions.swift */; };
+		89215B7623F6BBE500C2FEC8 /* UILabel+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B7523F6BBE500C2FEC8 /* UILabel+extensions.swift */; };
+		89215B7823F6BC2700C2FEC8 /* UIFont+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B7723F6BC2700C2FEC8 /* UIFont+extensions.swift */; };
+		89215B7A23F6C07C00C2FEC8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B7923F6C07C00C2FEC8 /* DataManager.swift */; };
+		89555B7B23FDF31400F182BB /* SODAClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B7923FDF31400F182BB /* SODAClient.swift */; };
+		89555B7E23FF50B200F182BB /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B7D23FF50B200F182BB /* GetRequest.swift */; };
+		89555B8023FF51F900F182BB /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B7F23FF51F900F182BB /* Services.swift */; };
+		89555B8323FF877D00F182BB /* UIButton+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B8223FF877B00F182BB /* UIButton+extensions.swift */; };
+		89B478D223F6DF6B00D30C8F /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B478D123F6DF6B00D30C8F /* CustomCollectionView.swift */; };
+		89B478D523F6DFC500D30C8F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B478D323F6DFC500D30C8F /* CustomCollectionViewCell.swift */; };
+		89B478D623F6DFC500D30C8F /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B478D423F6DFC500D30C8F /* CustomCollectionViewCell.xib */; };
+		89B478D823F6E72900D30C8F /* UIViewcontroller+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B478D723F6E72900D30C8F /* UIViewcontroller+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +75,31 @@
 		89215B2D23F69B3E00C2FEC8 /* MeteorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteorsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89215B3123F69B3E00C2FEC8 /* MeteorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorsUITests.swift; sourceTree = "<group>"; };
 		89215B3323F69B3E00C2FEC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89215B4223F69BAE00C2FEC8 /* MainFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFlowController.swift; sourceTree = "<group>"; };
+		89215B4723F69BAE00C2FEC8 /* MainFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFactory.swift; sourceTree = "<group>"; };
+		89215B4A23F69BAE00C2FEC8 /* MeteorDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteorDetailsModel.swift; sourceTree = "<group>"; };
+		89215B4C23F69BAE00C2FEC8 /* MeteorDetailsFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteorDetailsFlowController.swift; sourceTree = "<group>"; };
+		89215B4E23F69BAE00C2FEC8 /* MeteorDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeteorDetails.storyboard; sourceTree = "<group>"; };
+		89215B4F23F69BAE00C2FEC8 /* MeteorDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteorDetailsViewController.swift; sourceTree = "<group>"; };
+		89215B5123F69BAE00C2FEC8 /* MeteorDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteorDetailsViewModel.swift; sourceTree = "<group>"; };
+		89215B5323F69BAE00C2FEC8 /* MeteorDetailsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteorDetailsFactory.swift; sourceTree = "<group>"; };
+		89215B6223F6A5E100C2FEC8 /* UIColor+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extensions.swift"; sourceTree = "<group>"; };
+		89215B6D23F6ABD700C2FEC8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		89215B6F23F6AC2600C2FEC8 /* DataForMeteors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForMeteors.swift; sourceTree = "<group>"; };
+		89215B7123F6B1FD00C2FEC8 /* MeteorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorModel.swift; sourceTree = "<group>"; };
+		89215B7323F6BB5300C2FEC8 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
+		89215B7523F6BBE500C2FEC8 /* UILabel+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+extensions.swift"; sourceTree = "<group>"; };
+		89215B7723F6BC2700C2FEC8 /* UIFont+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extensions.swift"; sourceTree = "<group>"; };
+		89215B7923F6C07C00C2FEC8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		89555B7823FDF31400F182BB /* SODAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SODAKit.h; sourceTree = "<group>"; };
+		89555B7923FDF31400F182BB /* SODAClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SODAClient.swift; sourceTree = "<group>"; };
+		89555B7D23FF50B200F182BB /* GetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
+		89555B7F23FF51F900F182BB /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		89555B8223FF877B00F182BB /* UIButton+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extensions.swift"; sourceTree = "<group>"; };
+		89B478D123F6DF6B00D30C8F /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
+		89B478D323F6DFC500D30C8F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		89B478D423F6DFC500D30C8F /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		89B478D723F6E72900D30C8F /* UIViewcontroller+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +150,18 @@
 		89215B0B23F69B3300C2FEC8 /* Meteors */ = {
 			isa = PBXGroup;
 			children = (
+				89215B4023F69BAE00C2FEC8 /* Initial View */,
+				89215B4823F69BAE00C2FEC8 /* Meteor Details */,
+				89215B5C23F6A0B200C2FEC8 /* Extensios */,
+				89215B5D23F6A0BD00C2FEC8 /* Custom Views */,
+				89215B5E23F6A0DE00C2FEC8 /* Core Data */,
+				89555B8123FF580200F182BB /* Networking */,
+				89555B7723FDF31400F182BB /* SODAKit */,
 				89215B0C23F69B3300C2FEC8 /* AppDelegate.swift */,
 				89215B0E23F69B3300C2FEC8 /* SceneDelegate.swift */,
-				89215B1023F69B3300C2FEC8 /* ViewController.swift */,
-				89215B1223F69B3300C2FEC8 /* Main.storyboard */,
 				89215B1823F69B3D00C2FEC8 /* Assets.xcassets */,
 				89215B1A23F69B3D00C2FEC8 /* LaunchScreen.storyboard */,
 				89215B1D23F69B3D00C2FEC8 /* Info.plist */,
-				89215B1523F69B3300C2FEC8 /* Meteors.xcdatamodeld */,
 			);
 			path = Meteors;
 			sourceTree = "<group>";
@@ -129,6 +182,171 @@
 				89215B3323F69B3E00C2FEC8 /* Info.plist */,
 			);
 			path = MeteorsUITests;
+			sourceTree = "<group>";
+		};
+		89215B4023F69BAE00C2FEC8 /* Initial View */ = {
+			isa = PBXGroup;
+			children = (
+				89215B4323F69BAE00C2FEC8 /* Model */,
+				89215B4523F69BAE00C2FEC8 /* View Model */,
+				89215B4423F69BAE00C2FEC8 /* View */,
+				89215B4623F69BAE00C2FEC8 /* Factory */,
+				89215B4123F69BAE00C2FEC8 /* FlowController */,
+			);
+			path = "Initial View";
+			sourceTree = "<group>";
+		};
+		89215B4123F69BAE00C2FEC8 /* FlowController */ = {
+			isa = PBXGroup;
+			children = (
+				89215B4223F69BAE00C2FEC8 /* MainFlowController.swift */,
+			);
+			path = FlowController;
+			sourceTree = "<group>";
+		};
+		89215B4323F69BAE00C2FEC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89215B7123F6B1FD00C2FEC8 /* MeteorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89215B4423F69BAE00C2FEC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89215B1023F69B3300C2FEC8 /* ViewController.swift */,
+				89215B1223F69B3300C2FEC8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89215B4523F69BAE00C2FEC8 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		89215B4623F69BAE00C2FEC8 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				89215B4723F69BAE00C2FEC8 /* MainFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		89215B4823F69BAE00C2FEC8 /* Meteor Details */ = {
+			isa = PBXGroup;
+			children = (
+				89215B4923F69BAE00C2FEC8 /* Model */,
+				89215B5023F69BAE00C2FEC8 /* View Model */,
+				89215B4D23F69BAE00C2FEC8 /* View */,
+				89215B5223F69BAE00C2FEC8 /* Factory */,
+				89215B4B23F69BAE00C2FEC8 /* Flow Controller */,
+			);
+			path = "Meteor Details";
+			sourceTree = "<group>";
+		};
+		89215B4923F69BAE00C2FEC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89215B4A23F69BAE00C2FEC8 /* MeteorDetailsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89215B4B23F69BAE00C2FEC8 /* Flow Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89215B4C23F69BAE00C2FEC8 /* MeteorDetailsFlowController.swift */,
+			);
+			path = "Flow Controller";
+			sourceTree = "<group>";
+		};
+		89215B4D23F69BAE00C2FEC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89215B4E23F69BAE00C2FEC8 /* MeteorDetails.storyboard */,
+				89215B4F23F69BAE00C2FEC8 /* MeteorDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89215B5023F69BAE00C2FEC8 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				89215B5123F69BAE00C2FEC8 /* MeteorDetailsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		89215B5223F69BAE00C2FEC8 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				89215B5323F69BAE00C2FEC8 /* MeteorDetailsFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		89215B5C23F6A0B200C2FEC8 /* Extensios */ = {
+			isa = PBXGroup;
+			children = (
+				89215B6223F6A5E100C2FEC8 /* UIColor+extensions.swift */,
+				89215B7323F6BB5300C2FEC8 /* UIView+extensions.swift */,
+				89215B7523F6BBE500C2FEC8 /* UILabel+extensions.swift */,
+				89215B7723F6BC2700C2FEC8 /* UIFont+extensions.swift */,
+				89B478D723F6E72900D30C8F /* UIViewcontroller+extensions.swift */,
+				89555B8223FF877B00F182BB /* UIButton+extensions.swift */,
+			);
+			path = Extensios;
+			sourceTree = "<group>";
+		};
+		89215B5D23F6A0BD00C2FEC8 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				89B478D923F6E7E800D30C8F /* CustomCollectionView */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		89215B5E23F6A0DE00C2FEC8 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				89215B1523F69B3300C2FEC8 /* Meteors.xcdatamodeld */,
+				89215B6D23F6ABD700C2FEC8 /* CoreDataManager.swift */,
+				89215B6F23F6AC2600C2FEC8 /* DataForMeteors.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		89555B7723FDF31400F182BB /* SODAKit */ = {
+			isa = PBXGroup;
+			children = (
+				89555B7823FDF31400F182BB /* SODAKit.h */,
+				89555B7923FDF31400F182BB /* SODAClient.swift */,
+			);
+			path = SODAKit;
+			sourceTree = "<group>";
+		};
+		89555B8123FF580200F182BB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				89555B7D23FF50B200F182BB /* GetRequest.swift */,
+				89555B7F23FF51F900F182BB /* Services.swift */,
+				89215B7923F6C07C00C2FEC8 /* DataManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		89B478D923F6E7E800D30C8F /* CustomCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				89B478D123F6DF6B00D30C8F /* CustomCollectionView.swift */,
+				89B478D323F6DFC500D30C8F /* CustomCollectionViewCell.swift */,
+				89B478D423F6DFC500D30C8F /* CustomCollectionViewCell.xib */,
+			);
+			path = CustomCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +455,9 @@
 			files = (
 				89215B1C23F69B3D00C2FEC8 /* LaunchScreen.storyboard in Resources */,
 				89215B1923F69B3D00C2FEC8 /* Assets.xcassets in Resources */,
+				89215B5823F69BAE00C2FEC8 /* MeteorDetails.storyboard in Resources */,
 				89215B1423F69B3300C2FEC8 /* Main.storyboard in Resources */,
+				89B478D623F6DFC500D30C8F /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +483,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				89215B1123F69B3300C2FEC8 /* ViewController.swift in Sources */,
+				89B478D523F6DFC500D30C8F /* CustomCollectionViewCell.swift in Sources */,
+				89215B5523F69BAE00C2FEC8 /* MainFactory.swift in Sources */,
 				89215B0D23F69B3300C2FEC8 /* AppDelegate.swift in Sources */,
+				89215B6323F6A5E100C2FEC8 /* UIColor+extensions.swift in Sources */,
+				89555B8323FF877D00F182BB /* UIButton+extensions.swift in Sources */,
+				89215B5723F69BAE00C2FEC8 /* MeteorDetailsFlowController.swift in Sources */,
+				89B478D823F6E72900D30C8F /* UIViewcontroller+extensions.swift in Sources */,
 				89215B0F23F69B3300C2FEC8 /* SceneDelegate.swift in Sources */,
+				89215B7623F6BBE500C2FEC8 /* UILabel+extensions.swift in Sources */,
+				89215B5423F69BAE00C2FEC8 /* MainFlowController.swift in Sources */,
+				89555B8023FF51F900F182BB /* Services.swift in Sources */,
 				89215B1723F69B3300C2FEC8 /* Meteors.xcdatamodeld in Sources */,
+				89215B5923F69BAE00C2FEC8 /* MeteorDetailsViewController.swift in Sources */,
+				89555B7B23FDF31400F182BB /* SODAClient.swift in Sources */,
+				89215B7823F6BC2700C2FEC8 /* UIFont+extensions.swift in Sources */,
+				89B478D223F6DF6B00D30C8F /* CustomCollectionView.swift in Sources */,
+				89215B5A23F69BAE00C2FEC8 /* MeteorDetailsViewModel.swift in Sources */,
+				89215B7423F6BB5300C2FEC8 /* UIView+extensions.swift in Sources */,
+				89215B7223F6B1FD00C2FEC8 /* MeteorModel.swift in Sources */,
+				89215B5B23F69BAE00C2FEC8 /* MeteorDetailsFactory.swift in Sources */,
+				89215B6E23F6ABD700C2FEC8 /* CoreDataManager.swift in Sources */,
+				89555B7E23FF50B200F182BB /* GetRequest.swift in Sources */,
+				89215B7A23F6C07C00C2FEC8 /* DataManager.swift in Sources */,
+				89215B5623F69BAE00C2FEC8 /* MeteorDetailsModel.swift in Sources */,
+				89215B7023F6AC2600C2FEC8 /* DataForMeteors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

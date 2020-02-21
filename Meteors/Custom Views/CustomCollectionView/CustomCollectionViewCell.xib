@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CustomCollectionViewCell" customModule="Meteors" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fq2-KA-0dd">
+                        <rect key="frame" x="1" y="1" width="363" height="98"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RX6-lL-2eK">
+                                <rect key="frame" x="5" y="5" width="260" height="88"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7YD-xA-T8b">
+                                <rect key="frame" x="270" y="5" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7YD-xA-T8b" secondAttribute="height" multiplier="1:1" id="dep-et-SfL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RX6-lL-2eK" firstAttribute="top" secondItem="fq2-KA-0dd" secondAttribute="top" constant="5" id="4CC-rw-yOM"/>
+                            <constraint firstItem="7YD-xA-T8b" firstAttribute="leading" secondItem="RX6-lL-2eK" secondAttribute="trailing" constant="5" id="7Di-hR-3uo"/>
+                            <constraint firstItem="7YD-xA-T8b" firstAttribute="top" secondItem="fq2-KA-0dd" secondAttribute="top" constant="5" id="DaY-2O-4sl"/>
+                            <constraint firstAttribute="trailing" secondItem="7YD-xA-T8b" secondAttribute="trailing" constant="5" id="Qb9-JM-iVY"/>
+                            <constraint firstAttribute="bottom" secondItem="RX6-lL-2eK" secondAttribute="bottom" constant="5" id="ZLQ-7m-uMA"/>
+                            <constraint firstItem="RX6-lL-2eK" firstAttribute="leading" secondItem="fq2-KA-0dd" secondAttribute="leading" constant="5" id="m2Y-KQ-sR8"/>
+                            <constraint firstAttribute="bottom" secondItem="7YD-xA-T8b" secondAttribute="bottom" constant="5" id="uAq-Ss-c2w"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fq2-KA-0dd" secondAttribute="trailing" constant="1" id="Noa-fe-ddI"/>
+                <constraint firstAttribute="bottom" secondItem="fq2-KA-0dd" secondAttribute="bottom" constant="1" id="X1f-J5-q4s"/>
+                <constraint firstItem="fq2-KA-0dd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="ec2-1u-FZa"/>
+                <constraint firstItem="fq2-KA-0dd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="1" id="rAI-20-8aU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="365" height="50"/>
+            <connections>
+                <outlet property="meteorImage" destination="7YD-xA-T8b" id="GpE-5B-hZr"/>
+                <outlet property="meteorLabel" destination="RX6-lL-2eK" id="RoO-by-gt0"/>
+            </connections>
+            <point key="canvasLocation" x="158.69565217391306" y="81.696428571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

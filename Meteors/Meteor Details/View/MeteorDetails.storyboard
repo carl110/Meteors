@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bKt-p6-DLz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Meteor Details View Controller-->
+        <scene sceneID="S5i-Mw-KHJ">
+            <objects>
+                <viewController id="bKt-p6-DLz" customClass="MeteorDetailsViewController" customModule="Meteors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cv5-qL-f5o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ1-Mb-Bgw">
+                                <rect key="frame" x="5" y="104" width="404" height="354"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ci8-II-VfQ">
+                                <rect key="frame" x="5" y="463" width="404" height="404"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ci8-II-VfQ" secondAttribute="height" multiplier="1:1" id="ydO-9y-V3L"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMo-Og-TCx">
+                                <rect key="frame" x="5" y="49" width="404" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="kxM-kc-hbw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goBackButton:" destination="bKt-p6-DLz" eventType="touchUpInside" id="MuK-Bh-swF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="F1o-fF-r2E" firstAttribute="trailing" secondItem="FMo-Og-TCx" secondAttribute="trailing" constant="5" id="I0m-Ns-hIP"/>
+                            <constraint firstItem="F1o-fF-r2E" firstAttribute="trailing" secondItem="ci8-II-VfQ" secondAttribute="trailing" constant="5" id="LJL-S2-hYA"/>
+                            <constraint firstItem="ci8-II-VfQ" firstAttribute="bottom" secondItem="F1o-fF-r2E" secondAttribute="bottom" constant="5" id="M53-hs-GmT"/>
+                            <constraint firstItem="ci8-II-VfQ" firstAttribute="top" secondItem="JJ1-Mb-Bgw" secondAttribute="bottom" constant="5" id="NdL-OG-tUw"/>
+                            <constraint firstItem="F1o-fF-r2E" firstAttribute="trailing" secondItem="JJ1-Mb-Bgw" secondAttribute="trailing" constant="5" id="YKd-Is-pSA"/>
+                            <constraint firstItem="JJ1-Mb-Bgw" firstAttribute="top" secondItem="FMo-Og-TCx" secondAttribute="bottom" constant="5" id="fZD-xa-hI5"/>
+                            <constraint firstItem="FMo-Og-TCx" firstAttribute="top" secondItem="F1o-fF-r2E" secondAttribute="top" constant="5" id="i4M-Yl-zSa"/>
+                            <constraint firstItem="FMo-Og-TCx" firstAttribute="leading" secondItem="F1o-fF-r2E" secondAttribute="leading" constant="5" id="mmh-qD-lsn"/>
+                            <constraint firstItem="ci8-II-VfQ" firstAttribute="leading" secondItem="F1o-fF-r2E" secondAttribute="leading" constant="5" id="tt6-qg-mWM"/>
+                            <constraint firstItem="JJ1-Mb-Bgw" firstAttribute="leading" secondItem="F1o-fF-r2E" secondAttribute="leading" constant="5" id="uhD-Ry-kVc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F1o-fF-r2E"/>
+                    </view>
+                    <connections>
+                        <outlet property="goBackButton" destination="FMo-Og-TCx" id="GZx-AS-Ne0"/>
+                        <outlet property="mapView" destination="ci8-II-VfQ" id="LEl-1s-Xk8"/>
+                        <outlet property="meteorName" destination="JJ1-Mb-Bgw" id="csc-mx-cpX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vn9-pJ-Yao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+</document>
