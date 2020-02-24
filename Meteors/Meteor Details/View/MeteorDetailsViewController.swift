@@ -18,63 +18,39 @@ class MeteorDetailsViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var goBackButton: UIButton!
     
-    var longitude = 59.6
-    var latatude = 17.2
+    private var longitude = Double()
+    private var latatude = Double()
     private var rockName = String()
-    
     
     func assignDependancies(flowController: MeteorDetailsFlowController, viewModel: MeteorDetailsViewModel) {
         self.viewModel = viewModel
         self.flowController = flowController
     }
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dataLabelSetup()
         setup()
         buttonSetup()
-        
-
-
-        //Create the pin location of your restaurant(you need the GPS coordinates for this)
-         let meteorLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(latatude), longitude: CLLocationDegrees(longitude))
-
-        //Center the map on the place location
-        mapView.setCenter(meteorLocation, animated: true)
-
-        // Do any additional setup after loading the view.
-        
-        addPin()
+        mapPinSetup()
     }
     
     func setup() {
-        
         setBackgroundImageStreched()
-        
         let fetchedData = CoreDataManager.shared.fetchDataForID(meteorID: viewModel.meteorID)
-        
         
         for data in fetchedData! {
             print ("long = \(data.latitude)")
             longitude = Double(data.longitude)!
             latatude = Double(data.latitude)!
             rockName = data.name
-           
-           //            meteorName.dataLabelSetup()
+
             if longitude + latatude == 0 {
-                print ("NO Location")
-
                 meteorName.text = "   Name:      \(data.name)\n   Mass:       \(data.meteorSize)g\n   Year:         \(data.year.prefix(4))\n\n   Location Data Currently Unavailable..."
-
             } else {
                 meteorName.text = "   Name:      \(data.name)\n   Mass:       \(data.meteorSize)g\n   Year:         \(data.year.prefix(4))\n   Lat:          \(latatude)\n   Long:       \(longitude)"
-
             }
-           
         }
-
-        
     }
     
     func buttonSetup() {
@@ -93,29 +69,24 @@ class MeteorDetailsViewController: UIViewController {
         meteorName.layer.borderColor  = UIColor.Yellows.mustardYellow.cgColor
     }
     
-    func addPin() {
-        let annotation = MKPointAnnotation()
- annotation.coordinate = CLLocationCoordinate2D(latitude: latatude, longitude: longitude)
-        annotation.title = "\(rockName)"
-        //You can also add a subtitle that displays under the annotation such as
-        annotation.subtitle = "\(latatude) \(longitude)"
+    func mapPinSetup() {
         
+        //Create the pin location
+        let meteorLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(latatude), longitude: CLLocationDegrees(longitude))
+        
+        //Center the map on the place location
+        mapView.setCenter(meteorLocation, animated: true)
+        
+        //Add titles to pin
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: latatude, longitude: longitude)
+        annotation.title = "\(rockName)"
+        annotation.subtitle = "\(latatude) \(longitude)"
         mapView.addAnnotation(annotation)
     }
     
     @IBAction func goBackButton(_ sender: Any) {
-//        flowController.showMain()
+        //remove top viewcontroller
         self.popBack(2)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

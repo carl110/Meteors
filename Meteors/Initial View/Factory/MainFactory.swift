@@ -1,6 +1,5 @@
 //
 //  MainFactory.swift
-//  table setp
 //
 //  Created by Carl Wainwright on 20/12/2019.
 //  Copyright © 2019 Carl Wainwright. All rights reserved.
@@ -11,32 +10,23 @@ import UIKit
 
 class MainFactory {
     
-    
-     static func showIn(window: UIWindow) {
-         
-         let navigationController = UINavigationController()
+    static func showIn(window: UIWindow) {
         
-        
-         
-         let mainController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
-         
-         let mainFlowController = MainFlowController(navigationController: navigationController)
-         
+        let navigationController = UINavigationController()
+        let mainController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
+        let mainFlowController = MainFlowController(navigationController: navigationController)
         mainController.assignDependancies(mainFlowController: mainFlowController)
-        
         navigationController.isNavigationBarHidden = true
-         
-         navigationController.setViewControllers([mainController], animated: false)
-         window.rootViewController = navigationController
-         
-     }
-     
-     static func PushIn(navigationController: UINavigationController) {
-         
-         let mainEditor = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
-         let mainFlowController = MainFlowController(navigationController: navigationController)
+        navigationController.setViewControllers([mainController], animated: false)
+        window.rootViewController = navigationController
+    }
+    
+    static func PushIn(navigationController: UINavigationController) {
+        
+        let mainEditor = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
+        let mainFlowController = MainFlowController(navigationController: navigationController)
         mainEditor.assignDependancies(mainFlowController: mainFlowController)
-         navigationController.pushViewController(mainEditor, animated: true)
-         
-     }
+        navigationController.pushViewController(mainEditor, animated: true)
+        
+    }
 }

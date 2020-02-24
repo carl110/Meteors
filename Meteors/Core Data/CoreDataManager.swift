@@ -19,7 +19,7 @@ class CoreDataManager {
         return Singleton.instance
     }
     
-    func saveMeteorData (meteorID: String, meteorSize: Int32, name: String, year: String, longitude: String, latitude: String) {
+    func saveMeteorData (meteorID: String, meteorSize: Int32, name: String, year: String, longitude: String, latitude: String, dateOfUpdate: Date) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -36,6 +36,7 @@ class CoreDataManager {
         managedObject.setValue(year, forKey: "year")
         managedObject.setValue(longitude, forKey: "longitude")
         managedObject.setValue(latitude, forKey: "latitude")
+        managedObject.setValue(dateOfUpdate, forKey: "dateOfUpdate")
         
         do {
             try managedContext.save()
@@ -69,7 +70,32 @@ class CoreDataManager {
     }
     
     func fetchDataForID(meteorID: String) -> [DataForMeteors]? {
-        //Fetch data for selected date
+        //Fetch data for selected ID
+        let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate
+        let managedContext = appDelegate!.persistentContainer.viewContext
+        
+        let predicate = NSPredicate(format: "meteorID = %@", meteorID)
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Meteor")
+        fetchRequest.predicate = predicate
+        
+        do {
+            let tasks = try managedContext.fetch(fetchRequest)
+            var taskObjects: [DataForMeteors] = []
+            
+            tasks.forEach { (taskObject) in
+                taskObjects.append(DataForMeteors(object: taskObject))
+            }
+            
+            return taskObjects
+        } catch let error as NSError {
+            print ("Could not fetch. \(error) \(error.userInfo)")
+            return nil
+        }
+    }
+    
+    func fetchDatfaForID(meteorID: String) -> [DataForMeteors]? {
+        //Fetch data for selected ID
         let appDelegate =
             UIApplication.shared.delegate as? AppDelegate
         let managedContext = appDelegate!.persistentContainer.viewContext

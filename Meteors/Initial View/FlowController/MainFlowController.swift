@@ -1,6 +1,5 @@
 //
 //  MainFlowController.swift
-//  table setp
 //
 //  Created by Carl Wainwright on 20/12/2019.
 //  Copyright © 2019 Carl Wainwright. All rights reserved.
@@ -20,6 +19,5 @@ class MainFlowController {
     //Factory of view to show
     func showMeteorDetails(meteorID: String) {
             MeteorDetailsFactory.PushIn(navigationController: navigationController, meteorID: meteorID)
-            
         }
 }

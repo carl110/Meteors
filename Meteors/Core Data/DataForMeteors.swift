@@ -17,7 +17,7 @@ class DataForMeteors {
     var year: String
     var longitude: String
     var latitude: String
-    
+    var dateOfUpdate: Date
     
     init(object: NSManagedObject) {
         self.meteorID = object.value(forKey: "meteorID") as! String
@@ -26,6 +26,6 @@ class DataForMeteors {
         self.year = object.value(forKey: "year") as! String
         self.longitude = object.value(forKey: "longitude") as! String
         self.latitude = object.value(forKey: "latitude") as! String
+        self.dateOfUpdate = object.value(forKey: "dateOfUpdate") as! Date
     }
-    
 }

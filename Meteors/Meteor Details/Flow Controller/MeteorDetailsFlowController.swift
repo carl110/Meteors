@@ -10,15 +10,13 @@ import Foundation
 import UIKit
 
 class MeteorDetailsFlowController {
-        let navigationController: UINavigationController
-        
-        init(navigationController: UINavigationController) {
-            self.navigationController = navigationController
-        }
-        
+    let navigationController: UINavigationController
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
     //Factory of view to show
-        func showMain() {
-            MainFactory.PushIn(navigationController: navigationController)
-            
-        }   
+    func showMain() {
+        MainFactory.PushIn(navigationController: navigationController)
+    }
 }

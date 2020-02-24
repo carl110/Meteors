@@ -36,6 +36,9 @@
 		89555B7E23FF50B200F182BB /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B7D23FF50B200F182BB /* GetRequest.swift */; };
 		89555B8023FF51F900F182BB /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B7F23FF51F900F182BB /* Services.swift */; };
 		89555B8323FF877D00F182BB /* UIButton+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B8223FF877B00F182BB /* UIButton+extensions.swift */; };
+		89555B852403D47F00F182BB /* Date+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B842403D47E00F182BB /* Date+extensions.swift */; };
+		89555B882403EDE500F182BB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B872403EDE400F182BB /* MainViewModel.swift */; };
+		89555B8C2403FF4000F182BB /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B8B2403FF3F00F182BB /* CoreDataTests.swift */; };
 		89B478D223F6DF6B00D30C8F /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B478D123F6DF6B00D30C8F /* CustomCollectionView.swift */; };
 		89B478D523F6DFC500D30C8F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B478D323F6DFC500D30C8F /* CustomCollectionViewCell.swift */; };
 		89B478D623F6DFC500D30C8F /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B478D423F6DFC500D30C8F /* CustomCollectionViewCell.xib */; };
@@ -96,6 +99,9 @@
 		89555B7D23FF50B200F182BB /* GetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
 		89555B7F23FF51F900F182BB /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		89555B8223FF877B00F182BB /* UIButton+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extensions.swift"; sourceTree = "<group>"; };
+		89555B842403D47E00F182BB /* Date+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extensions.swift"; sourceTree = "<group>"; };
+		89555B872403EDE400F182BB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		89555B8B2403FF3F00F182BB /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		89B478D123F6DF6B00D30C8F /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
 		89B478D323F6DFC500D30C8F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		89B478D423F6DFC500D30C8F /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 			children = (
 				89215B2623F69B3E00C2FEC8 /* MeteorsTests.swift */,
 				89215B2823F69B3E00C2FEC8 /* Info.plist */,
+				89555B8B2403FF3F00F182BB /* CoreDataTests.swift */,
 			);
 			path = MeteorsTests;
 			sourceTree = "<group>";
@@ -188,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				89215B4323F69BAE00C2FEC8 /* Model */,
-				89215B4523F69BAE00C2FEC8 /* View Model */,
+				89555B862403EDBE00F182BB /* View Model */,
 				89215B4423F69BAE00C2FEC8 /* View */,
 				89215B4623F69BAE00C2FEC8 /* Factory */,
 				89215B4123F69BAE00C2FEC8 /* FlowController */,
@@ -219,13 +226,6 @@
 				89215B1223F69B3300C2FEC8 /* Main.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		89215B4523F69BAE00C2FEC8 /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Model";
 			sourceTree = "<group>";
 		};
 		89215B4623F69BAE00C2FEC8 /* Factory */ = {
@@ -298,6 +298,7 @@
 				89215B7723F6BC2700C2FEC8 /* UIFont+extensions.swift */,
 				89B478D723F6E72900D30C8F /* UIViewcontroller+extensions.swift */,
 				89555B8223FF877B00F182BB /* UIButton+extensions.swift */,
+				89555B842403D47E00F182BB /* Date+extensions.swift */,
 			);
 			path = Extensios;
 			sourceTree = "<group>";
@@ -337,6 +338,14 @@
 				89215B7923F6C07C00C2FEC8 /* DataManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		89555B862403EDBE00F182BB /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				89555B872403EDE400F182BB /* MainViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		89B478D923F6E7E800D30C8F /* CustomCollectionView */ = {
@@ -486,6 +495,7 @@
 				89B478D523F6DFC500D30C8F /* CustomCollectionViewCell.swift in Sources */,
 				89215B5523F69BAE00C2FEC8 /* MainFactory.swift in Sources */,
 				89215B0D23F69B3300C2FEC8 /* AppDelegate.swift in Sources */,
+				89555B882403EDE500F182BB /* MainViewModel.swift in Sources */,
 				89215B6323F6A5E100C2FEC8 /* UIColor+extensions.swift in Sources */,
 				89555B8323FF877D00F182BB /* UIButton+extensions.swift in Sources */,
 				89215B5723F69BAE00C2FEC8 /* MeteorDetailsFlowController.swift in Sources */,
@@ -498,6 +508,7 @@
 				89215B5923F69BAE00C2FEC8 /* MeteorDetailsViewController.swift in Sources */,
 				89555B7B23FDF31400F182BB /* SODAClient.swift in Sources */,
 				89215B7823F6BC2700C2FEC8 /* UIFont+extensions.swift in Sources */,
+				89555B852403D47F00F182BB /* Date+extensions.swift in Sources */,
 				89B478D223F6DF6B00D30C8F /* CustomCollectionView.swift in Sources */,
 				89215B5A23F69BAE00C2FEC8 /* MeteorDetailsViewModel.swift in Sources */,
 				89215B7423F6BB5300C2FEC8 /* UIView+extensions.swift in Sources */,
@@ -515,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89555B8C2403FF4000F182BB /* CoreDataTests.swift in Sources */,
 				89215B2723F69B3E00C2FEC8 /* MeteorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

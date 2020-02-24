@@ -16,7 +16,7 @@ protocol MeteorCellSelectedDelegate {
 }
 
 class CustomCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+    
     //placeholder for number to remove from year for pagenation
     private var yearCount = 1
     var cellDelegate: MeteorCellSelectedDelegate?
@@ -41,20 +41,15 @@ class CustomCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
         let meteorModel = DataManager.shared.meteorList[indexPath.item]
         cell.populate(meteorModel: meteorModel)
-        
-        
-        
-        
         return cell
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let meteorModel = DataManager.shared.meteorList[indexPath.item]
         let id = meteorModel.meteorID
         //send id to delegate for ViewController
         cellDelegate?.cellWasSelected(id: id)
     }
-
     
     //set layout for cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
