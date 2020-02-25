@@ -11,8 +11,6 @@ import UIKit
 
 protocol MeteorCellSelectedDelegate {
     func cellWasSelected(id: String)
-    
-    func nearingScrollEnd(year: Int)
 }
 
 class CustomCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -69,14 +67,5 @@ class CustomCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
-    }
-    
-    //When scroll gets to 10 before the end
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == DataManager.shared.meteorList.count - 25 {
-            //pass number of years to remove to view controller
-            cellDelegate?.nearingScrollEnd(year: yearCount)
-            yearCount += 1
-        }
     }
 }

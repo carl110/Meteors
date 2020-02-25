@@ -15,7 +15,7 @@ extension UIViewController {
     func setBackgroundImageStreched() {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "meteorShower")
-        backgroundImage.contentMode = .scaleAspectFit
+        backgroundImage.contentMode = .scaleToFill
         self.view.insertSubview(backgroundImage, at: 0)
     }
     

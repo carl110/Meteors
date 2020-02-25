@@ -39,23 +39,15 @@ class ViewController: UIViewController, MeteorCellSelectedDelegate {
     }
     
     func cellWasSelected(id: String) {
-        print ("cell pressedx with id\(id)")
-        
         mainFlowController.showMeteorDetails(meteorID: id)
-
-    }
-    
-    func nearingScrollEnd(year: Int) {
-        print ("Nearing end of scroll") 
     }
     
     func collectionViewSetup() {
-
         fetchSavedMeteorList()
 
-        //If no saved data or the data was last fatched before today then fetch from API
+        //If no saved data or the data was last fetched before today then fetch from API
         let fetchedData = CoreDataManager.shared.fetchSavedData()
-        if fetchedData!.count == 0 || daysSinceLastUpdate() == 0 {
+        if fetchedData!.count == 0 || daysSinceLastUpdate() > 0 {
             print ("if condition met")
             fetchDataFromAPI()
         }
@@ -72,11 +64,9 @@ class ViewController: UIViewController, MeteorCellSelectedDelegate {
                 }
             }
         }
-        
     }
     
     func fetchSavedMeteorList() {
-        print ("fetch saved data")
         if let fetchedData = CoreDataManager.shared.fetchSavedData() {
         
         let meteorList: [MeteorModel] = {
@@ -90,8 +80,6 @@ class ViewController: UIViewController, MeteorCellSelectedDelegate {
                                          latitude: i.latitude)
                 list.append(meteor)
             }
-            
-            print ("return list")
             return list
         } ()
         DataManager.shared.meteorList = meteorList
@@ -103,7 +91,7 @@ class ViewController: UIViewController, MeteorCellSelectedDelegate {
         let fetchedData = CoreDataManager.shared.fetchSavedData()
         var daysSinceUpdate = Int()
         for i in fetchedData! {
-            daysSinceUpdate = i.dateOfUpdate.daysFromToday()
+            daysSinceUpdate = i.dateOfUpdate.numberOfDaysToToday()
             break
         }
         return daysSinceUpdate

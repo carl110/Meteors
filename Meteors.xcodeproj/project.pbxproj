@@ -18,7 +18,6 @@
 		89215B3223F69B3E00C2FEC8 /* MeteorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B3123F69B3E00C2FEC8 /* MeteorsUITests.swift */; };
 		89215B5423F69BAE00C2FEC8 /* MainFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B4223F69BAE00C2FEC8 /* MainFlowController.swift */; };
 		89215B5523F69BAE00C2FEC8 /* MainFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B4723F69BAE00C2FEC8 /* MainFactory.swift */; };
-		89215B5623F69BAE00C2FEC8 /* MeteorDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B4A23F69BAE00C2FEC8 /* MeteorDetailsModel.swift */; };
 		89215B5723F69BAE00C2FEC8 /* MeteorDetailsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B4C23F69BAE00C2FEC8 /* MeteorDetailsFlowController.swift */; };
 		89215B5823F69BAE00C2FEC8 /* MeteorDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89215B4E23F69BAE00C2FEC8 /* MeteorDetails.storyboard */; };
 		89215B5923F69BAE00C2FEC8 /* MeteorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B4F23F69BAE00C2FEC8 /* MeteorDetailsViewController.swift */; };
@@ -39,6 +38,7 @@
 		89555B852403D47F00F182BB /* Date+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B842403D47E00F182BB /* Date+extensions.swift */; };
 		89555B882403EDE500F182BB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B872403EDE400F182BB /* MainViewModel.swift */; };
 		89555B8C2403FF4000F182BB /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B8B2403FF3F00F182BB /* CoreDataTests.swift */; };
+		89555B8E2404055200F182BB /* ColourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89555B8D2404055200F182BB /* ColourTests.swift */; };
 		89B478D223F6DF6B00D30C8F /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B478D123F6DF6B00D30C8F /* CustomCollectionView.swift */; };
 		89B478D523F6DFC500D30C8F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B478D323F6DFC500D30C8F /* CustomCollectionViewCell.swift */; };
 		89B478D623F6DFC500D30C8F /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B478D423F6DFC500D30C8F /* CustomCollectionViewCell.xib */; };
@@ -80,7 +80,6 @@
 		89215B3323F69B3E00C2FEC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89215B4223F69BAE00C2FEC8 /* MainFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFlowController.swift; sourceTree = "<group>"; };
 		89215B4723F69BAE00C2FEC8 /* MainFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFactory.swift; sourceTree = "<group>"; };
-		89215B4A23F69BAE00C2FEC8 /* MeteorDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteorDetailsModel.swift; sourceTree = "<group>"; };
 		89215B4C23F69BAE00C2FEC8 /* MeteorDetailsFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteorDetailsFlowController.swift; sourceTree = "<group>"; };
 		89215B4E23F69BAE00C2FEC8 /* MeteorDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeteorDetails.storyboard; sourceTree = "<group>"; };
 		89215B4F23F69BAE00C2FEC8 /* MeteorDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteorDetailsViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +101,7 @@
 		89555B842403D47E00F182BB /* Date+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extensions.swift"; sourceTree = "<group>"; };
 		89555B872403EDE400F182BB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		89555B8B2403FF3F00F182BB /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		89555B8D2404055200F182BB /* ColourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourTests.swift; sourceTree = "<group>"; };
 		89B478D123F6DF6B00D30C8F /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
 		89B478D323F6DFC500D30C8F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		89B478D423F6DFC500D30C8F /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -178,6 +178,7 @@
 				89215B2623F69B3E00C2FEC8 /* MeteorsTests.swift */,
 				89215B2823F69B3E00C2FEC8 /* Info.plist */,
 				89555B8B2403FF3F00F182BB /* CoreDataTests.swift */,
+				89555B8D2404055200F182BB /* ColourTests.swift */,
 			);
 			path = MeteorsTests;
 			sourceTree = "<group>";
@@ -239,21 +240,12 @@
 		89215B4823F69BAE00C2FEC8 /* Meteor Details */ = {
 			isa = PBXGroup;
 			children = (
-				89215B4923F69BAE00C2FEC8 /* Model */,
 				89215B5023F69BAE00C2FEC8 /* View Model */,
 				89215B4D23F69BAE00C2FEC8 /* View */,
 				89215B5223F69BAE00C2FEC8 /* Factory */,
 				89215B4B23F69BAE00C2FEC8 /* Flow Controller */,
 			);
 			path = "Meteor Details";
-			sourceTree = "<group>";
-		};
-		89215B4923F69BAE00C2FEC8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				89215B4A23F69BAE00C2FEC8 /* MeteorDetailsModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		89215B4B23F69BAE00C2FEC8 /* Flow Controller */ = {
@@ -517,7 +509,6 @@
 				89215B6E23F6ABD700C2FEC8 /* CoreDataManager.swift in Sources */,
 				89555B7E23FF50B200F182BB /* GetRequest.swift in Sources */,
 				89215B7A23F6C07C00C2FEC8 /* DataManager.swift in Sources */,
-				89215B5623F69BAE00C2FEC8 /* MeteorDetailsModel.swift in Sources */,
 				89215B7023F6AC2600C2FEC8 /* DataForMeteors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +519,7 @@
 			files = (
 				89555B8C2403FF4000F182BB /* CoreDataTests.swift in Sources */,
 				89215B2723F69B3E00C2FEC8 /* MeteorsTests.swift in Sources */,
+				89555B8E2404055200F182BB /* ColourTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

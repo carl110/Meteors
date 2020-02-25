@@ -11,17 +11,8 @@ import UIKit
 
 extension Date {
     
-    //Add ammount to a date
-    func add(years: Int = 0, months: Int = 0, days: Int = 0, hours: Int = 0, minutes: Int = 0, seconds: Int = 0) -> Date? {
-        let components = DateComponents(year: years, month: months, day: days, hour: hours, minute: minutes, second: seconds)
-        return Calendar.current.date(byAdding: components, to: self)
-    }
-    
-    func days(sinceDate: Date) -> Int? {
-        return Calendar.current.dateComponents([.day], from: sinceDate, to: self).day
-    }
-    
-    func daysFromToday() -> Int {
+    //Provides a number for days between date and today
+    func numberOfDaysToToday() -> Int {
       return abs(Calendar.current.dateComponents([.day], from: self, to: Date()).day!)
     }
 }

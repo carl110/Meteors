@@ -15,7 +15,7 @@ class MainViewModel {
         let fetchedData = CoreDataManager.shared.fetchSavedData()
         var daysSinceUpdate = Int()
         for i in fetchedData! {
-            daysSinceUpdate = i.dateOfUpdate.daysFromToday()
+            daysSinceUpdate = i.dateOfUpdate.numberOfDaysToToday()
             break
         }
         return daysSinceUpdate
