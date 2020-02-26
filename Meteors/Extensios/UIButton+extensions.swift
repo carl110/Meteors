@@ -23,7 +23,7 @@ extension UIButton {
             self?.setTitle(title, for: .normal)
             self?.backgroundColor = UIColor.Shades.standardGrey.withAlphaComponent(0.6)
             self?.setTitleColor(UIColor.Shades.standardWhite, for: .normal)
-            self?.titleLabel?.font = UIFont.boldSystemFont(ofSize: (self?.frame.height)! / 1.2)
+            self?.titleLabel?.font = UIFont.boldSystemFont(ofSize: (self?.frame.height)! / 1.5)
             self?.titleLabel?.adjustsFontSizeToFitWidth = true
             self?.centerTextHorizontally(spacing: 8)
             self?.contentVerticalAlignment = .center

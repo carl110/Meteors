@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Create singleton to pass data to secondary tab
 class Singleton {
     var id = String()
     class var sharedInstance : Singleton {

@@ -16,21 +16,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ1-Mb-Bgw">
-                                <rect key="frame" x="5" y="104" width="404" height="354"/>
+                                <rect key="frame" x="5" y="104" width="404" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JJ1-Mb-Bgw" secondAttribute="height" multiplier="2:1" id="esR-PD-MHd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ci8-II-VfQ">
-                                <rect key="frame" x="5" y="463" width="404" height="404"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ci8-II-VfQ" secondAttribute="height" multiplier="1:1" id="ydO-9y-V3L"/>
-                                </constraints>
+                                <rect key="frame" x="5" y="311" width="404" height="556"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMo-Og-TCx">
                                 <rect key="frame" x="5" y="49" width="404" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="kxM-kc-hbw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="kxM-kc-hbw"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>

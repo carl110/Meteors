@@ -30,7 +30,7 @@ class MeteorListViewController: UIViewController, MeteorCellSelectedDelegate {
     func initialSetup() {
         navigationController?.isNavigationBarHidden = true
         setBackgroundImageStreched()
-        titleLabel.titleLabelSetUp(text: "Add Meteor to Map to View/Copmpare")
+        titleLabel.titleLabelSetUp(text: "Add Meteor to Map to View/Compare")
         meteorCollectionView.cellDelegate = self
         
         //set layout of collectionview cells
@@ -86,8 +86,6 @@ class MeteorListViewController: UIViewController, MeteorCellSelectedDelegate {
         }
     }
     
-
-
     func reloadCollectionView() {
         DispatchQueue.main.async { [weak self] in
             self?.meteorCollectionView.reloadData()

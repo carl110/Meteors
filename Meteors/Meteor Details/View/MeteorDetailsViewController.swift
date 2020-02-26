@@ -54,7 +54,7 @@ class MeteorDetailsViewController: UIViewController, MKMapViewDelegate {
     //Set map center from long & lat
     func setRegion() {
         let meteorLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
-        let span = MKCoordinateSpan.init(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        let span = MKCoordinateSpan.init(latitudeDelta: 50, longitudeDelta: 50)
         let region = MKCoordinateRegion.init(center: (meteorLocation), span: span)
         mapView.setRegion(region, animated: false)
     }

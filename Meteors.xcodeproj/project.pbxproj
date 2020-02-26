@@ -14,7 +14,6 @@
 		89215B1723F69B3300C2FEC8 /* Meteors.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89215B1523F69B3300C2FEC8 /* Meteors.xcdatamodeld */; };
 		89215B1923F69B3D00C2FEC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89215B1823F69B3D00C2FEC8 /* Assets.xcassets */; };
 		89215B1C23F69B3D00C2FEC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89215B1A23F69B3D00C2FEC8 /* LaunchScreen.storyboard */; };
-		89215B2723F69B3E00C2FEC8 /* MeteorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B2623F69B3E00C2FEC8 /* MeteorsTests.swift */; };
 		89215B3223F69B3E00C2FEC8 /* MeteorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B3123F69B3E00C2FEC8 /* MeteorsUITests.swift */; };
 		89215B5823F69BAE00C2FEC8 /* MeteorDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89215B4E23F69BAE00C2FEC8 /* MeteorDetails.storyboard */; };
 		89215B5923F69BAE00C2FEC8 /* MeteorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89215B4F23F69BAE00C2FEC8 /* MeteorDetailsViewController.swift */; };
@@ -78,7 +77,6 @@
 		89215B1B23F69B3D00C2FEC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89215B1D23F69B3D00C2FEC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89215B2223F69B3E00C2FEC8 /* MeteorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		89215B2623F69B3E00C2FEC8 /* MeteorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorsTests.swift; sourceTree = "<group>"; };
 		89215B2823F69B3E00C2FEC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89215B2D23F69B3E00C2FEC8 /* MeteorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteorsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89215B3123F69B3E00C2FEC8 /* MeteorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorsUITests.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 		89215B2523F69B3E00C2FEC8 /* MeteorsTests */ = {
 			isa = PBXGroup;
 			children = (
-				89215B2623F69B3E00C2FEC8 /* MeteorsTests.swift */,
 				89215B2823F69B3E00C2FEC8 /* Info.plist */,
 				89555B8B2403FF3F00F182BB /* CoreDataTests.swift */,
 				89555B8D2404055200F182BB /* ColourTests.swift */,
@@ -530,7 +527,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				89555B8C2403FF4000F182BB /* CoreDataTests.swift in Sources */,
-				89215B2723F69B3E00C2FEC8 /* MeteorsTests.swift in Sources */,
 				89555B8E2404055200F182BB /* ColourTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

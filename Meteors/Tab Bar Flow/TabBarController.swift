@@ -19,6 +19,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+        //Load view for rendering ease
+        self.selectedIndex = 1
     }
     
     override func viewWillAppear(_ animated: Bool) {

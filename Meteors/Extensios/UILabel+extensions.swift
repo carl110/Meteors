@@ -24,7 +24,7 @@ extension UILabel {
          self.backgroundColor = UIColor.clear
          self.numberOfLines = 5
          self.textAlignment = .left
-         self.font = UIFont.boldSystemFont(ofSize: self.bounds.height / 12)
+         self.font = UIFont.boldSystemFont(ofSize: self.bounds.height / 7)
          self.adjustsFontSizeToFitWidth = true
          self.textColor = UIColor.Shades.standardWhite
          self.layer.borderWidth = 4
