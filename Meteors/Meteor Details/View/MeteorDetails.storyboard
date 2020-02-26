@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bKt-p6-DLz">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="bKt-p6-DLz" customClass="MeteorDetailsViewController" customModule="Meteors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cv5-qL-f5o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ1-Mb-Bgw">
-                                <rect key="frame" x="5" y="104" width="404" height="202"/>
+                                <rect key="frame" x="5" y="60" width="1014" height="507"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JJ1-Mb-Bgw" secondAttribute="height" multiplier="2:1" id="esR-PD-MHd"/>
                                 </constraints>
@@ -25,12 +25,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ci8-II-VfQ">
-                                <rect key="frame" x="5" y="311" width="404" height="556"/>
+                                <rect key="frame" x="5" y="572" width="1014" height="779"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMo-Og-TCx">
-                                <rect key="frame" x="5" y="49" width="404" height="50"/>
+                                <rect key="frame" x="387" y="5" width="250" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="kxM-kc-hbw"/>
+                                    <constraint firstAttribute="width" constant="250" id="gre-9n-AwU"/>
+                                    <constraint firstAttribute="height" constant="50" id="kxM-kc-hbw"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -40,14 +41,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="F1o-fF-r2E" firstAttribute="trailing" secondItem="FMo-Og-TCx" secondAttribute="trailing" constant="5" id="I0m-Ns-hIP"/>
                             <constraint firstItem="F1o-fF-r2E" firstAttribute="trailing" secondItem="ci8-II-VfQ" secondAttribute="trailing" constant="5" id="LJL-S2-hYA"/>
                             <constraint firstItem="ci8-II-VfQ" firstAttribute="bottom" secondItem="F1o-fF-r2E" secondAttribute="bottom" constant="5" id="M53-hs-GmT"/>
                             <constraint firstItem="ci8-II-VfQ" firstAttribute="top" secondItem="JJ1-Mb-Bgw" secondAttribute="bottom" constant="5" id="NdL-OG-tUw"/>
                             <constraint firstItem="F1o-fF-r2E" firstAttribute="trailing" secondItem="JJ1-Mb-Bgw" secondAttribute="trailing" constant="5" id="YKd-Is-pSA"/>
                             <constraint firstItem="JJ1-Mb-Bgw" firstAttribute="top" secondItem="FMo-Og-TCx" secondAttribute="bottom" constant="5" id="fZD-xa-hI5"/>
                             <constraint firstItem="FMo-Og-TCx" firstAttribute="top" secondItem="F1o-fF-r2E" secondAttribute="top" constant="5" id="i4M-Yl-zSa"/>
-                            <constraint firstItem="FMo-Og-TCx" firstAttribute="leading" secondItem="F1o-fF-r2E" secondAttribute="leading" constant="5" id="mmh-qD-lsn"/>
+                            <constraint firstItem="FMo-Og-TCx" firstAttribute="centerX" secondItem="Cv5-qL-f5o" secondAttribute="centerX" id="knw-PG-7fm"/>
                             <constraint firstItem="ci8-II-VfQ" firstAttribute="leading" secondItem="F1o-fF-r2E" secondAttribute="leading" constant="5" id="tt6-qg-mWM"/>
                             <constraint firstItem="JJ1-Mb-Bgw" firstAttribute="leading" secondItem="F1o-fF-r2E" secondAttribute="leading" constant="5" id="uhD-Ry-kVc"/>
                         </constraints>

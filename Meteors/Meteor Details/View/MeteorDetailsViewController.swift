@@ -56,7 +56,7 @@ class MeteorDetailsViewController: UIViewController, MKMapViewDelegate {
         let meteorLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
         let span = MKCoordinateSpan.init(latitudeDelta: 50, longitudeDelta: 50)
         let region = MKCoordinateRegion.init(center: (meteorLocation), span: span)
-        mapView.setRegion(region, animated: false)
+        mapView.setRegion(region, animated: true)
     }
     
     //Add titles to pin
