@@ -26,7 +26,6 @@ class CoreDataManager {
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
-        
         let entity = NSEntityDescription.entity(forEntityName: "Meteor", in: managedContext)!
         let managedObject = NSManagedObject(entity: entity, insertInto: managedContext)
         
@@ -51,17 +50,13 @@ class CoreDataManager {
         let appDelegate =
             UIApplication.shared.delegate as? AppDelegate
         let managedContext = appDelegate!.persistentContainer.viewContext
-        
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Meteor")
-        
         do {
             let objects = try managedContext.fetch(fetchRequest)
             var savedObjects: [DataForMeteors] = []
-            
             objects.forEach { (savedObject) in
                 savedObjects.append(DataForMeteors(object: savedObject))
             }
-            
             return savedObjects
         } catch let error as NSError {
             print ("Could not fetch. \(error) \(error.userInfo)")
@@ -70,23 +65,20 @@ class CoreDataManager {
     }
     
     func fetchDataForID(meteorID: String) -> [DataForMeteors]? {
+        
         //Fetch data for selected ID
         let appDelegate =
             UIApplication.shared.delegate as? AppDelegate
         let managedContext = appDelegate!.persistentContainer.viewContext
-        
         let predicate = NSPredicate(format: "meteorID = %@", meteorID)
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Meteor")
         fetchRequest.predicate = predicate
-        
         do {
             let tasks = try managedContext.fetch(fetchRequest)
             var taskObjects: [DataForMeteors] = []
-            
             tasks.forEach { (taskObject) in
                 taskObjects.append(DataForMeteors(object: taskObject))
             }
-            
             return taskObjects
         } catch let error as NSError {
             print ("Could not fetch. \(error) \(error.userInfo)")
@@ -95,23 +87,20 @@ class CoreDataManager {
     }
     
     func fetchDatfaForID(meteorID: String) -> [DataForMeteors]? {
+        
         //Fetch data for selected ID
         let appDelegate =
             UIApplication.shared.delegate as? AppDelegate
         let managedContext = appDelegate!.persistentContainer.viewContext
-        
         let predicate = NSPredicate(format: "meteorID = %@", meteorID)
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Meteor")
         fetchRequest.predicate = predicate
-        
         do {
             let tasks = try managedContext.fetch(fetchRequest)
             var taskObjects: [DataForMeteors] = []
-            
             tasks.forEach { (taskObject) in
                 taskObjects.append(DataForMeteors(object: taskObject))
             }
-            
             return taskObjects
         } catch let error as NSError {
             print ("Could not fetch. \(error) \(error.userInfo)")
@@ -120,13 +109,12 @@ class CoreDataManager {
     }
     
     func deleteAllSavedData() {
+        
         //Remove all data saved with coreData
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-        
         let context = appDelegate.persistentContainer.viewContext
-        
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
         fetchRequest.entity = NSEntityDescription.entity(forEntityName: "Meteor", in: context)
         fetchRequest.includesPropertyValues = false
@@ -136,11 +124,8 @@ class CoreDataManager {
                 context.delete(result)
             }
             try context.save()
-            
         } catch {
-            
             print("fetch error -\(error.localizedDescription)")
         }
     }
-    
 }

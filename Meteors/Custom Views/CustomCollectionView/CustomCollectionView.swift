@@ -14,9 +14,7 @@ protocol MeteorCellSelectedDelegate {
 }
 
 class CustomCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    //placeholder for number to remove from year for pagenation
-    private var yearCount = 1
+
     var cellDelegate: MeteorCellSelectedDelegate?
     
     override func awakeFromNib() {

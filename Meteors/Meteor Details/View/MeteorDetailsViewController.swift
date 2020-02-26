@@ -37,7 +37,7 @@ class MeteorDetailsViewController: UIViewController, MKMapViewDelegate {
             setRegion()
             setAnnotation()
         } else {
-            alert(message: "The meteor you selected does not have te required information to show further details\n\nPlease select a different Meteor")
+            alert(message: "The meteor you selected does not have the required information to show further details\n\nPlease select a different Meteor")
         }
     }
     

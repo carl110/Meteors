@@ -13,8 +13,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var meteorLabel: UILabel!
     @IBOutlet weak var meteorImage: UIImageView!
     
-    var sizeOfMeteor: Int32?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         meteorLabel.backgroundColor = UIColor.Shades.standardGrey.withAlphaComponent(0.6)
