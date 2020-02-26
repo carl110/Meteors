@@ -19,7 +19,6 @@ class CustomCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
     private var yearCount = 1
     var cellDelegate: MeteorCellSelectedDelegate?
     
-    
     override func awakeFromNib() {
         delegate = self
         dataSource = self

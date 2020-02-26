@@ -12,15 +12,11 @@ class DataManager {
     
     static let shared = DataManager()
     
-    private init() {
-
-    }
-    
-    lazy var meteorList: [MeteorModel] = {
+    lazy var meteorList: [MeteorListModel] = {
         
-        var list = [MeteorModel]()
+        var list = [MeteorListModel]()
         
-        let meteor = MeteorModel(meteorID: "No meteors to show",
+        let meteor = MeteorListModel(meteorID: "No meteors to show",
                                  meteorSize: 1,
                                  name: "Please wait while data loads",
                                  year: "Year",

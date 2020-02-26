@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         //Set initial screen and show Main
-        MainFactory.showIn(window: window!)
+        TabBarBuilder.showIn(window: window!)
+    
         window?.makeKeyAndVisible()
         
         guard let _ = (scene as? UIWindowScene) else { return }

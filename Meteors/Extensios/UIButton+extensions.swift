@@ -18,8 +18,9 @@ extension UIButton {
         self.titleLabel?.textAlignment = NSTextAlignment.center
     }
     
-    func buttonSetup() {
+    func buttonSetup(title: String) {
         DispatchQueue.main.async { [weak self] in
+            self?.setTitle(title, for: .normal)
             self?.backgroundColor = UIColor.Shades.standardGrey.withAlphaComponent(0.6)
             self?.setTitleColor(UIColor.Shades.standardWhite, for: .normal)
             self?.titleLabel?.font = UIFont.boldSystemFont(ofSize: (self?.frame.height)! / 1.2)
@@ -28,6 +29,5 @@ extension UIButton {
             self?.contentVerticalAlignment = .center
             self?.roundCorners(for: .allCorners, cornerRadius: 25)
         }
-        
     }
 }

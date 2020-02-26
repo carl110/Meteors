@@ -13,10 +13,10 @@ class GetRequest {
     
     let services = Services()
     
-    static func getMeteorList (_ sender: Any, completion: @escaping (Bool, [MeteorModel]?) -> Void) {
+    static func getMeteorList (_ sender: Any, completion: @escaping (Bool, [MeteorListModel]?) -> Void) {
         
         var meteorData: [[String: Any]]! = []
-        var list = [MeteorModel]()
+        var list = [MeteorListModel]()
         let today = Date()
         
         //Make a query with a filter to pull all dataes from 2011 onwards
@@ -48,7 +48,7 @@ class GetRequest {
                     let number = Int32(meteorSize) ?? 0
                     
                     if number > 0 {
-                        let meteorModel = MeteorModel(meteorID: meteorID, meteorSize: number, name: name, year: year, longitude: long, latitude: lat)
+                        let meteorModel = MeteorListModel(meteorID: meteorID, meteorSize: number, name: name, year: year, longitude: long, latitude: lat)
                         
                         list.append(meteorModel)
                         CoreDataManager.shared.saveMeteorData(meteorID: meteorID,

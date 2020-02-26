@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MainViewModel {
+class MeteorListViewModel {
     
     //Provide an Int for number of days since the API was last pulled
     func daysSinceLastUpdate() -> Int{

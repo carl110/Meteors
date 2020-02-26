@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MeteorModel {
+class MeteorListModel {
     
     var meteorID: String
     var meteorSize: Int32

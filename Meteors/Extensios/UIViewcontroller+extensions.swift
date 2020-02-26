@@ -26,15 +26,4 @@ extension UIViewController {
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    //Move viewcontroller back in stck by n
-    func popBack(_ nb: Int) {
-        if let viewControllers: [UIViewController] = self.navigationController?.viewControllers {
-            guard viewControllers.count < nb else {
-                self.navigationController?.popToViewController(viewControllers[viewControllers.count - nb], animated: true)
-                return
-            }
-        }
-    }
-    
 }

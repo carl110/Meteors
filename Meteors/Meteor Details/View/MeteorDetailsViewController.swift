@@ -9,10 +9,9 @@
 import UIKit
 import MapKit
 
-class MeteorDetailsViewController: UIViewController {
+class MeteorDetailsViewController: UIViewController, MKMapViewDelegate {
     
-    fileprivate var flowController: MeteorDetailsFlowController!
-    fileprivate var viewModel: MeteorDetailsViewModel!
+    fileprivate var flowController: MeteorDetailsFlow!
     
     @IBOutlet weak var meteorName: UILabel!
     @IBOutlet weak var mapView: MKMapView!
@@ -22,70 +21,50 @@ class MeteorDetailsViewController: UIViewController {
     private var latitude = Double()
     private var rockName = String()
     
-    func assignDependancies(flowController: MeteorDetailsFlowController, viewModel: MeteorDetailsViewModel) {
-        self.viewModel = viewModel
+    func assignDependencies(flowController: MeteorDetailsFlow) {
         self.flowController = flowController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataLabelSetup()
-        setup()
-        buttonSetup()
-        mapPinSetup()
+        initialSetup()
     }
     
-    func setup() {
-        setBackgroundImageStreched()
-        
-        //Fetch data from CoreData using the meteorID
-        if let fetchedData = CoreDataManager.shared.fetchDataForID(meteorID: viewModel.meteorID) {
-            for data in fetchedData {
-                
-                longitude = Double(data.longitude) ?? 0
-                latitude = Double(data.latitude) ?? 0
-                rockName = data.name
-                
-                if longitude + latitude == 0 {
-                    longitude = -77.0098
-                    latitude = 38.8765
-                    meteorName.text = "   Name:      \(data.name)\n   Mass:       \(data.meteorSize)g\n   Year:         \(data.year.prefix(4))\n\n   Location Data Currently Unavailable..."
-                } else {
-                    meteorName.text = "   Name:      \(data.name)\n   Mass:       \(data.meteorSize)g\n   Year:         \(data.year.prefix(4))\n   Lat:          \(latitude)\n   Long:       \(longitude)"
-                }
-            }
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        if !Singleton.sharedInstance.meteorID.isEmpty{
+            getMeteorData()
+            setRegion()
+            setAnnotation()
+        } else {
+            alert(message: "The meteor you selected does not have te required information to show further details\n\nPlease select a different Meteor")
         }
     }
     
-    func buttonSetup() {
-        goBackButton.setTitle("View full list of Meteors", for: .normal)
-        goBackButton.buttonSetup()
+    func initialSetup() {
+        mapView.delegate = self
+        mapView.mapType = .hybrid
+        mapView.showsScale = true
+        self.navigationController?.isNavigationBarHidden = true
+        setBackgroundImageStreched()
+        meteorName.meteorDataLabelSetup()
+        goBackButton.buttonSetup(title: "Back to Meteor List")
     }
     
-    func dataLabelSetup() {
-            meteorName.backgroundColor = UIColor.clear
-            meteorName.numberOfLines = 5
-            meteorName.textAlignment = .left
-            meteorName.font = UIFont.boldSystemFont(ofSize: meteorName.bounds.height / 12)
-            meteorName.adjustsFontSizeToFitWidth = true
-            meteorName.textColor = UIColor.Shades.standardWhite
-            meteorName.layer.borderWidth = 4
-            meteorName.layer.borderColor  = UIColor.Yellows.mustardYellow.cgColor
-    }
-    
-    func mapPinSetup() {
-        
-        //Create the pin location
+    //Set map center from long & lat
+    func setRegion() {
         let meteorLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
-        
-        //Center the map on the meteor landind location
-        mapView.setCenter(meteorLocation, animated: true)
-        
-        //Add titles to pin
+        let span = MKCoordinateSpan.init(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        let region = MKCoordinateRegion.init(center: (meteorLocation), span: span)
+        mapView.setRegion(region, animated: false)
+    }
+    
+    //Add titles to pin
+    func setAnnotation() {
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         annotation.title = "\(rockName)"
-        if latitude + longitude == 0 {
+        if latitude == 37.563936 && longitude == -116.85123 {
             annotation.subtitle = "Location data is unavailable"
         } else {
             annotation.subtitle = "\(latitude) \(longitude)"
@@ -93,17 +72,46 @@ class MeteorDetailsViewController: UIViewController {
         mapView.addAnnotation(annotation)
     }
     
-    deinit {
-        mapView.showsUserLocation = false
-        let allAnnotations = self.mapView.annotations
-        self.mapView.removeAnnotations(allAnnotations)
-        mapView.removeFromSuperview()
-        mapView.delegate = nil
+    //Set custom annotation
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationIdentifier = "AnnotationIdentifier"
+        var annotationView: MKAnnotationView?
+        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
+            annotationView = dequeuedAnnotationView
+            annotationView?.annotation = annotation
+        }
+        else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+        }
+        if let annotationView = annotationView {
+            annotationView.canShowCallout = true
+            annotationView.image = UIImage(named: "chevron")
+        }
+        return annotationView
     }
-    
-    @IBAction func goBackButton(_ sender: Any) {
+
+    func getMeteorData() {
         
-        //remove top viewcontroller
-        self.popBack(2)
+        //Fetch data from CoreData using the meteorID
+        if let fetchedData = CoreDataManager.shared.fetchDataForID(meteorID: Singleton.sharedInstance.meteorID) {
+            for data in fetchedData {
+                longitude = Double(data.longitude) ?? 0
+                latitude = Double(data.latitude) ?? 0
+                rockName = data.name
+                
+                //If lon lat is 0 set to giant target
+                if longitude + latitude == 0 {
+                    longitude = -116.85123
+                    latitude = 37.563936
+                    meteorName.text = "   Name:      \(data.name)\n   Mass:       \(data.meteorSize)g\n   Year:         \(data.year.prefix(4))\n\n   Location Data Currently Unavailable..."
+                } else {
+                    meteorName.text = "   Name:      \(data.name)\n   Mass:       \(data.meteorSize)g\n   Year:         \(data.year.prefix(4))\n   Lat:          \(latitude)\n   Long:       \(longitude)"
+                }
+            }
+        }
+    }
+
+    @IBAction func goBackButton(_ sender: Any) {
+        tabBarController?.selectedIndex = 0
     }
 }

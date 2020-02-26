@@ -27,7 +27,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
         meteorLabel.layer.borderColor  = UIColor.getRandomColor.cgColor
     }
     
-    func populate(meteorModel: MeteorModel) {
+    func populate(meteorModel: MeteorListModel) {
         meteorLabel.text = "\(meteorModel.name)\n\(meteorModel.meteorSize) grams"
         meteorImage.image = UIImage(named: "chevron")
         meteorLabel.adjustsFontSizeToFitWidth = true
